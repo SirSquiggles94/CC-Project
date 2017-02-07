@@ -1,0 +1,264 @@
+body
+{
+	margin: 0px;
+	padding: 0px;
+	background-color: #EEEEEE;
+	width: 100%;
+	text-align: center;
+}
+
+h1
+{
+	
+}
+
+h2
+{
+	color: black;
+	font-family: arial;
+	font-size: 18px;
+}
+
+h6
+{
+	font-family: arial;
+	font-size: 18px;
+	color: red;
+	margin-top: -5px;
+	margin-bottom: 15px;
+}
+
+form
+{
+	padding: 15px;
+}
+
+label
+{
+	font-size: 18px;
+	font-family: arial;
+}
+
+#logo
+{
+	width: 300px;
+}
+
+#part_1
+{
+	text-align: center;
+	font-family: arial;
+	font-size: 18;
+	display: block;
+	margin-bottom: 75px;
+}
+
+#part_2_restaraunt
+{
+	display: none;
+}
+
+#part_2_supplier
+{
+	display: none;
+}
+
+#part_3
+{
+	display: none;
+}
+
+#signup_type
+{
+	list-style-type: none;
+	margin-left: calc(50% - 130px);
+}
+#signup_type li input
+{
+	width: 175px;
+	height: 55px;
+	border: 3px solid #DDDDDD;
+	background-color: white;
+	color: black;
+	margin-top: 25px;
+	margin-right: 25px;
+	margin-bottom: 25px;
+	padding-bottom: 10px;
+	text-align: center;
+	cursor: pointer;
+	float: center;
+	display: block;
+	text-decoration: none;
+}
+
+#signup_type li input:hover
+{
+	background-color: #EEEEEE;
+}
+
+#next
+{
+	margin-left: calc(50% - 87.5px);
+}
+
+#missing_info
+{
+	visibility: hidden;
+}
+
+.form_panel
+{
+	min-width: 250px;
+	max-width: 75%;
+	background-color: white;
+	margin: auto;
+	border: 2px solid #DDDDDD;
+}
+
+.form_field
+{
+	width: 200px;
+	border: 1px solid #DDDDDD;
+	height: 25px;
+	font-size: 18px;
+	padding-left: 5px;
+	margin-bottom: 15px;
+}
+
+.choice_button
+{
+	font-family: arial;
+	font-size: 18px;
+	font-weight: bold;
+	padding-top: 10px;
+	
+	width: 175px;
+	height: 55px;
+	border: 3px solid #DDDDDD;
+	background-color: white;
+	color: black;
+	margin-top: 25px;
+	padding-bottom: 10px;
+	text-align: center;
+	cursor: pointer;
+	float: center;
+	display: block;
+	text-decoration: none;
+}
+
+.choice_button:hover
+{
+	background-color: #EEEEEE;
+}
+
+@media screen and (min-width: 775px)
+{
+	h2
+	{
+		font-size: 28px;
+	}
+	
+	form
+	{
+		padding: 25px;
+	}
+	
+	#logo 
+	{
+		width: 750px;
+	}
+	
+	#col_1
+	{
+		border-right: 1px solid #DDDDDD;
+		margin-bottom: 0px;
+		width: 325px;
+		display: inline-block;
+	}
+
+	#col_2
+	{
+		width: 255px;
+		display: inline-block;
+		float: right;
+		padding-left: 20px;
+		
+	}
+	
+	#signup_type
+	{
+		list-style-type: none;
+		margin-left: calc(50% - 232.5px);
+	}
+
+	#signup_type li input
+	{
+		display: inline;
+		float: left;
+		
+	}
+	
+	.form_panel
+	{
+		max-width: 700px;
+		text-align: left;
+	}
+	
+	.form_field
+	{
+		width: 250px;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

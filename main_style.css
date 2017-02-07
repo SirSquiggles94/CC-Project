@@ -1,0 +1,239 @@
+body
+{
+	margin: 0px;
+	padding: 0px;
+	background-image: url("Images/img.jpg");
+	background-size: cover;
+}
+
+h1
+{
+	font-size: 58px;
+	font-family: Arial;
+	color: black;
+	cursor: default;
+}
+
+h2
+{
+	font-size: 39px;
+	font-family: Arial;
+	color: black;
+	cursor: default;
+}
+	
+h3
+{
+	font-size: 18px;
+	font-family: Arial;
+	font-weight: normal;
+	color: black;
+}
+
+a
+{
+	text-decoration: none;
+}
+
+#welcome_tag
+{
+	text-align: center;
+	margin: auto;
+	margin-top: 50px;
+}
+#logo
+{
+	width: 275px;
+}
+#portal_list
+{
+	list-style-type: none;
+	margin-left: calc(50% - 130px);
+}
+#portal_list li a
+{
+	width: 175px;
+	height: 55px;
+	border: 3px solid #DDDDDD;
+	background-color: white;
+	margin-top: 75px;
+	margin-right: 25px;
+	margin-bottom: -25px;
+	text-align: center;
+	cursor: pointer;
+	float: center;
+	display: block;
+}
+
+#sign_up_list
+{
+	list-style-type: none;
+	margin-left: calc(50% - 125px);
+}
+
+#sign_up_list li a
+{
+	width: 175px;
+	height: 55px;
+	border: 3px solid #DDDDDD;
+	background-color: white;
+	margin-top: 200px;
+	margin: auto;
+	text-align: center;
+	cursor: pointer;
+	float: left;
+}
+
+#sign_up_button
+{
+	margin-top: 50px;
+}
+
+@media screen and (min-width: 775px) 
+{
+
+	h1
+	{
+		font-size: 72px;
+	}
+	
+	h2
+	{
+		font-size: 47px;
+	}
+	
+	h3
+	{
+		font-size: 18px;
+	}
+	
+	#welcome_tag
+	{
+		margin-top: 150px;
+	}
+
+	#logo
+	{
+		width: 750px;
+	}
+
+	#portal_list
+	{
+		list-style-type: none;
+		margin-left: calc(50% - 232.5px);
+	}
+
+	#portal_list li a
+	{
+		display: inline;
+		float: left;
+		
+	}
+	
+	#sign_up_button
+	{
+		margin-top: 200px;
+	}
+}
+
+#portal_list li a:hover
+{
+	background-color: #EEEEEE;
+}
+
+#sign_up_list li a:hover
+{
+	background-color: #EEEEEE;
+}
+
+.fancy_or 
+{
+	line-height: 0.75;
+	text-align: center;
+}
+
+.fancy_or  span 
+{
+	display: inline-block;
+	position: relative; 
+	font-family: arial;
+	font-weight: bold;
+	cursor: default;
+}
+
+.fancy_or  span:before,
+.fancy_or span:after 
+{
+	content: "";
+	position: absolute;
+	height: 5px;
+	border-bottom: 2px solid #DDDDDD;
+	top: 0;
+	width: 340px;
+}
+
+.fancy_or  span:before
+{
+	right: 100%;
+	margin-right: 15px;
+}
+
+.fancy_or  span:after 
+{
+	left: 100%;
+	margin-left: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
