@@ -1,0 +1,211 @@
+body
+{
+	margin: 0px;
+	padding: 0px;
+	background-color: #EEEEEE;
+	width: 100%;
+	text-align: center;
+}
+
+h1
+{
+	
+}
+
+h2
+{
+	color: black;
+	font-family: arial;
+	font-size: 18px;
+}
+
+h5
+{
+	font-family: arial;
+	font-size: 16px;
+	color: black;
+}
+
+h6
+{
+	font-family: arial;
+	font-size: 18px;
+	color: red;
+	margin-top: -5px;
+	margin-bottom: 15px;
+}
+
+form
+{
+	padding: 15px;
+}
+
+label
+{
+	font-size: 18px;
+	font-family: arial;
+}
+
+a
+{
+	color: black;
+	text-decoration: none;
+}
+
+a:hover
+{
+	text-decoration: underline;
+}
+
+#logo
+{
+	width: 300px;
+}
+
+#next
+{
+	margin-left: calc(50% - 87.5px);
+}
+
+#missing_info
+{
+	visibility: hidden;
+}
+
+.form_panel
+{
+	min-width: 250px;
+	max-width: 75%;
+	background-color: white;
+	margin: auto;
+	border: 2px solid #DDDDDD;
+}
+
+.form_field
+{
+	width: 200px;
+	border: 1px solid #DDDDDD;
+	height: 25px;
+	font-size: 18px;
+	padding-left: 5px;
+	margin-bottom: 15px;
+}
+
+.choice_button
+{
+	font-family: arial;
+	font-size: 18px;
+	font-weight: bold;
+	padding-top: 10px;
+	
+	width: 175px;
+	height: 55px;
+	border: 3px solid #DDDDDD;
+	background-color: white;
+	color: black;
+	margin-top: 25px;
+	padding-bottom: 10px;
+	text-align: center;
+	cursor: pointer;
+	float: center;
+	display: block;
+	text-decoration: none;
+}
+
+.choice_button:hover
+{
+	background-color: #EEEEEE;
+}
+
+.fancy_hr
+{
+	width: 200px;
+	border: 1px solid #DDDDDD;
+}
+
+@media screen and (min-width: 775px)
+{
+	h2
+	{
+		font-size: 28px;
+	}
+	
+	form
+	{
+		padding: 25px;
+	}
+	
+	#logo 
+	{
+		width: 750px;
+	}
+	
+	.form_panel
+	{
+		max-width: 700px;
+		text-align: left;
+	}
+	
+	.form_field
+	{
+		width: 250px;
+	}
+	.fancy_hr
+	{
+		width: 250px;
+		margin-left: 0px;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
