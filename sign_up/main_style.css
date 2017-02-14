@@ -53,17 +53,22 @@ label
 	margin-bottom: 75px;
 }
 
-#part_2_restaraunt
-{
-	display: none;
-}
-
-#part_2_supplier
+#part_2
 {
 	display: none;
 }
 
 #part_3
+{
+	display: none;
+}
+
+#restaurant
+{
+	display: none;
+}
+
+#supplier
 {
 	display: none;
 }
