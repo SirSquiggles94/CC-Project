@@ -1,0 +1,41 @@
+body
+{
+	margin: 0px;
+	padding: 0px;
+	background-color: #EEEEEE;
+	width: 100%;
+	text-align: center;
+}
+
+header
+{
+	background-color: white;
+	height: 50px;
+	width: calc(100% - 250px);
+	position: fixed;
+	margin-left: 250px;
+}
+
+nav
+{
+	background-color: white;
+	width: 250px;
+	height: 100%;
+	position: fixed;
+	z-index: 1;
+}
+
+content
+{
+	border-left: 2px solid #DDDDDD;
+	border-top: 2px solid #DDDDDD;
+	width: calc(100% - 252px);
+	height: calc(100% - 52px);
+	margin-top: 50px;
+	float: right;
+}
+
+@media screen and (min-width: 775px)
+{
+	
+}
