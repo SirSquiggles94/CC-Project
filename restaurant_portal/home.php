@@ -30,18 +30,19 @@
 						var click_count = 0;
 		
 						window.addEventListener("resize", enable_nav);
+						document.getElementById("content").addEventListener("click", test);
 
 						function enable_nav()
 						{
 							var win_size = window.innerWidth;
 							if(win_size > 775)
 							{
-								document.getElementById("nav_bar").style.visibility = "visible";
+								document.getElementById("nav_bar").style.display = "block";
 								click_count = 1;
 							}
 							else if(win_size < 775)
 							{
-								document.getElementById("nav_bar").style.visibility = "hidden";
+								document.getElementById("nav_bar").style.display = "none";
 								click_count = 0;
 							}
 						}
@@ -50,14 +51,19 @@
 						{	
 							if(click_count == 0)								
 							{
-								document.getElementById("nav_bar").style.visibility = "visible";
+								document.getElementById("nav_bar").style.display = "block";
 								click_count = 1;
 							}
 							else if(click_count == 1)
 							{
-								document.getElementById("nav_bar").style.visibility = "hidden";
+								document.getElementById("nav_bar").style.display = "none";
 								click_count = 0;
 							}
+						}
+						
+						function test()
+						{
+							window.alert("Hide Menu");
 						}
 						
 					</script>
@@ -77,14 +83,69 @@
 		</header>
 		<nav id = "nav_bar">
 		
-		
-			Nav Text
+			<ul class = "nav_list">
+				<li>
+					
+					<a>Your Account</a>
+					
+				</li>
+				<li>
+					Your Orders
+				</li>
+				<li>
+					Your Current Stock
+				</li>
+				<li>
+					Your Basket
+				</li>
+				<li>
+					Place an Order
+				</li>
+				<li>
+					Browse Products
+				</li>
+				<li>
+					Favourite Suppliers
+				</li>
+				<li>
+					Favourite Products
+				</li>
+			</ul>
+			
 		
 		</nav>
-		<content>
+		<content id = "content">
 			
-			Content Text
+			<ul class = "category_box">
+				<li>
+					
+					Your Account
+					
+				</li>
+				<li>
+					Your Orders
+				</li>
+				<li>
+					Your Current Stock
+				</li>
+				<li>
+					Your Basket
+				</li>
+				<li>
+					Place an Order
+				</li>
+				<li>
+					Browse Products
+				</li>
+				<li>
+					Favourite Suppliers
+				</li>
+				<li>
+					Favourite Products
+				</li>
+			</ul>
 			
 		</content>
+		
 	</body>
 </html>
