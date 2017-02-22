@@ -88,6 +88,7 @@
 					
 					<a>Your Account</a>
 					
+					
 				</li>
 				<li>
 					Your Orders
@@ -120,28 +121,36 @@
 				<li>
 					
 					Your Account
+					<img src = "Images/account_icon.png" class = "tile_icon">
 					
 				</li>
 				<li>
 					Your Orders
+					<img src = "Images/orders_icon.png" class = "tile_icon">
 				</li>
 				<li>
 					Your Current Stock
+					<img src = "Images/stock_icon.png" class = "tile_icon">
 				</li>
 				<li>
 					Your Basket
+					<img src = "Images/basket_icon.png" class = "tile_icon">
 				</li>
 				<li>
 					Place an Order
+					<img src = "Images/plcOrder_icon.png" class = "tile_icon">
 				</li>
 				<li>
 					Browse Products
+					<img src = "Images/browse_icon.png" class = "tile_icon">
 				</li>
 				<li>
 					Favourite Suppliers
+					<img src = "Images/favSupplier_icon.png" class = "tile_icon">
 				</li>
 				<li>
 					Favourite Products
+					<img src = "Images/favProduct_icon.png" class = "tile_icon">
 				</li>
 			</ul>
 			
