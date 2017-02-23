@@ -35,12 +35,12 @@
 						function enable_nav()
 						{
 							var win_size = window.innerWidth;
-							if(win_size > 775)
+							if(win_size > 720)
 							{
 								document.getElementById("nav_bar").style.display = "block";
 								click_count = 1;
 							}
-							else if(win_size < 775)
+							else if(win_size < 720)
 							{
 								document.getElementById("nav_bar").style.display = "none";
 								click_count = 0;
@@ -85,72 +85,114 @@
 		
 			<ul class = "nav_list">
 				<li>
-					
-					<a>Your Account</a>
-					
-					
+					<a href = "home.php?p=1">	
+						<div id = "account_nav">
+							&nbsp; Your Account
+						</div>
+					</a>
 				</li>
 				<li>
-					Your Orders
+					<a href = "home.php?p=2">	
+						<div id = "orders_nav">
+							&nbsp; Your Orders
+						</div>
+					</a>
 				</li>
 				<li>
-					Your Current Stock
+					<a href = "home.php?p=3">	
+						<div id = "stock_nav">
+							&nbsp; Your Stock
+						</div>
+					</a>
 				</li>
 				<li>
-					Your Basket
+					<a href = "home.php?p=4">	
+						<div id = "basket_nav">
+							&nbsp; Your Basket
+						</div>
+					</a>
 				</li>
 				<li>
-					Place an Order
+					<a href = "home.php?p=5">	
+						<div id = "plOrder_nav">
+							&nbsp; Place an Order
+						</div>
+					</a>
 				</li>
 				<li>
-					Browse Products
+					<a href = "home.php?p=6">	
+						<div id = "browse_nav">
+							&nbsp; Browse Products
+						</div>
+					</a>
 				</li>
 				<li>
-					Favourite Suppliers
+					<a href = "home.php?p=7">	
+						<div id = "favSupplier_nav">
+							&nbsp; Favourite Suppliers
+						</div>
+					</a>
 				</li>
 				<li>
-					Favourite Products
+					<a href = "home.php?p=8">	
+						<div id = "favProduct_nav">
+							&nbsp; Favourite Products
+						</div>
+					</a>
 				</li>
 			</ul>
 			
-		
 		</nav>
 		<content id = "content">
 			
 			<ul class = "category_box">
 				<li>
-					
-					Your Account
-					<img src = "Images/account_icon.png" class = "tile_icon">
-					
+					<div id = "account">
+						Your Account
+						<img src = "Images/account_icon.png" class = "tile_icon">	
+					</div>
+				</li>
+				<li >
+					<div id = "orders">
+						Your Orders
+						<img src = "Images/orders_icon.png" class = "tile_icon">
+					</div>
 				</li>
 				<li>
-					Your Orders
-					<img src = "Images/orders_icon.png" class = "tile_icon">
+					<div id = "stock">
+						Your Current Stock
+						<img src = "Images/stock_icon.png" class = "tile_icon">
+					</div>
 				</li>
 				<li>
-					Your Current Stock
-					<img src = "Images/stock_icon.png" class = "tile_icon">
+					<div id = "basket">
+						Your Basket
+						<img src = "Images/basket_icon.png" class = "tile_icon">
+					</div>
 				</li>
 				<li>
-					Your Basket
-					<img src = "Images/basket_icon.png" class = "tile_icon">
+					<div id = "plOrder">
+						Place an Order
+						<img src = "Images/plcOrder_icon.png" class = "tile_icon">
+					</div>
 				</li>
 				<li>
-					Place an Order
-					<img src = "Images/plcOrder_icon.png" class = "tile_icon">
+					<div id = "browse">
+						Browse Products
+						<img src = "Images/browse_icon.png" class = "tile_icon">
+					</div>
 				</li>
 				<li>
-					Browse Products
-					<img src = "Images/browse_icon.png" class = "tile_icon">
+					<div id = "favSupplier">
+						Favourite Suppliers
+						<img src = "Images/favSupplier_icon.png" class = "tile_icon">
+					</div>
 				</li>
 				<li>
-					Favourite Suppliers
-					<img src = "Images/favSupplier_icon.png" class = "tile_icon">
-				</li>
-				<li>
-					Favourite Products
-					<img src = "Images/favProduct_icon.png" class = "tile_icon">
+					<div id = "favProduct">
+						Favourite Products
+						<img src = "Images/favProduct_icon.png" class = "tile_icon">
+					</div>
 				</li>
 			</ul>
 			
