@@ -1,6 +1,5 @@
 <?php
 
-
-	//include 'lib.php';
+	header('location: home.php');
 	
 ?>

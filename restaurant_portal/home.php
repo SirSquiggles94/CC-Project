@@ -8,7 +8,7 @@
 	
 	</head>
 	
-	<body>
+	<body>		
 		
 		<header>
 			<ul class = "title_menu">
@@ -144,59 +144,52 @@
 			
 		</nav>
 		<content id = "content">
+		
+			<?php
 			
-			<ul class = "category_box">
-				<li>
-					<div id = "account">
-						Your Account
-						<img src = "Images/account_icon.png" class = "tile_icon">	
-					</div>
-				</li>
-				<li >
-					<div id = "orders">
-						Your Orders
-						<img src = "Images/orders_icon.png" class = "tile_icon">
-					</div>
-				</li>
-				<li>
-					<div id = "stock">
-						Your Current Stock
-						<img src = "Images/stock_icon.png" class = "tile_icon">
-					</div>
-				</li>
-				<li>
-					<div id = "basket">
-						Your Basket
-						<img src = "Images/basket_icon.png" class = "tile_icon">
-					</div>
-				</li>
-				<li>
-					<div id = "plOrder">
-						Place an Order
-						<img src = "Images/plcOrder_icon.png" class = "tile_icon">
-					</div>
-				</li>
-				<li>
-					<div id = "browse">
-						Browse Products
-						<img src = "Images/browse_icon.png" class = "tile_icon">
-					</div>
-				</li>
-				<li>
-					<div id = "favSupplier">
-						Favourite Suppliers
-						<img src = "Images/favSupplier_icon.png" class = "tile_icon">
-					</div>
-				</li>
-				<li>
-					<div id = "favProduct">
-						Favourite Products
-						<img src = "Images/favProduct_icon.png" class = "tile_icon">
-					</div>
-				</li>
-			</ul>
+				if(isset($_GET['p']))
+				{
+					$url = $_GET['p'];
+				}
+				else 
+				{
+					$url = null;
+				}
+				
+				switch ($url)
+				{
+					case 1 :
+						echo $url;
+						break;
+					case 2 :
+						echo $url;
+						break;
+					case 3 :
+						echo $url;
+						break;
+					case 4 :
+						echo $url;
+						break;	
+					case 5 :
+						echo $url;
+						break;
+					case 6 :
+						echo $url;
+						break;
+					case 7 :
+						echo $url;
+						break;
+					case 8 :
+						echo $url;
+						break;
+					default:
+						include 'home_default.php';
+						break;
+				}
+			?>
+			
+			
 			
 		</content>
-		
 	</body>
 </html>
