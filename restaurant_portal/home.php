@@ -159,37 +159,35 @@
 				switch ($url)
 				{
 					case 1 :
-						echo $url;
+						include 'home_account.php';
 						break;
 					case 2 :
-						echo $url;
+						include 'home_orders.php';
 						break;
 					case 3 :
-						echo $url;
+						include 'home_stock.php';
 						break;
 					case 4 :
-						echo $url;
+						include 'home_basket.php';
 						break;	
 					case 5 :
-						echo $url;
+						include 'home_plOrder.php';
 						break;
 					case 6 :
-						echo $url;
+						include 'home_browse.php';
 						break;
 					case 7 :
-						echo $url;
+						include 'home_favSuppliers.php';
 						break;
 					case 8 :
-						echo $url;
+						include 'home_favProducts.php';
 						break;
 					default:
 						include 'home_default.php';
 						break;
 				}
 			?>
-			
-			
-			
+
 		</content>
 	</body>
 </html>

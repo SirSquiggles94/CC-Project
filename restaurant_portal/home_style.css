@@ -284,6 +284,18 @@ For Nav Bar
     transition-timing-function: linear;
 }
 
+#info_panel
+{
+	text-align: left;
+	float: left;
+	width: 650px;
+}
+
+#password_update
+{
+	
+}
+
 .small_menu
 {
 	display: inline;
@@ -299,6 +311,23 @@ For Nav Bar
 .title_menu li
 {
 	display: inline;
+}
+
+.account_panel
+{
+	width: 90%;
+	list-style-type: none;
+}
+
+.account_panel li
+{
+	background-color: white;
+	display: inline-block;
+	box-shadow: 7px 7px 5px #888888;
+	padding: 10px;
+	text-align: left;
+	float: left;
+	margin: 20px;
 }
 
 .category_box
