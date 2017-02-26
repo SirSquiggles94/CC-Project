@@ -15,7 +15,6 @@ header
 	position: fixed;
 	z-index: 3;
 	padding-left: 20px;
-	
 }
 
 nav
@@ -39,7 +38,6 @@ content
 	margin-top: 120px;
 	float: left;
 	text-align: center;
-
 }
 
 a
@@ -284,6 +282,10 @@ For Nav Bar
     transition-timing-function: linear;
 }
 
+/*
+	Account page
+*/
+
 #info_panel
 {
 	text-align: left;
@@ -335,6 +337,27 @@ For Nav Bar
 	margin-top: 275px;
 }
 
+/*
+	Orders Page
+*/
+
+#orders_panel
+{
+	background-color: white;
+	box-shadow: 7px 7px 5px #888888;
+	margin-top: 30px;
+	width: 850px;
+	padding: 20px;
+	
+	margin-left: calc(50% - 525px);
+	text-align: left;
+}
+
+.order_items tr td
+{
+	padding: 10px;
+}
+
 .button
 {
 	width: 125px;
@@ -381,7 +404,6 @@ For Nav Bar
 {
 	width: 90%;
 	list-style-type: none;
-	
 }
 
 .category_box li
@@ -520,6 +542,10 @@ For Nav Bar
 	width: 100%;
 }
 
+/*
+	For Large Screens
+*/
+
 @media screen and (min-width: 720px)
 {
 	header
@@ -539,7 +565,6 @@ For Nav Bar
 		margin-top: 60px;
 		width: calc(100% - 252px);
 		float: right;
-		
 	}
 	
 	#menu_button
@@ -578,39 +603,5 @@ For Nav Bar
 		margin-bottom: 5px;
 		margin-left: 10px;
 		margin-right: 10px;
-	}
-	
+	}	
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

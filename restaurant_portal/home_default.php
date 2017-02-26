@@ -15,14 +15,7 @@
 						</div>
 					</a>
 				</li>
-				<li>
-					<a href = "home.php?p=3">
-						<div id = "stock">
-							Your Current Stock
-							<img src = "Images/stock_icon.png" class = "tile_icon">
-						</div>
-					</a>
-				</li>
+				
 				<li>
 					<a href = "home.php?p=4">
 						<div id = "basket">

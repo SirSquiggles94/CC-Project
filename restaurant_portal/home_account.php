@@ -68,6 +68,7 @@
 	
 	
 	</li>
+	
 </ul>
 
 <div id = "change_details_panel">

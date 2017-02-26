@@ -101,13 +101,7 @@
 						</div>
 					</a>
 				</li>
-				<li>
-					<a href = "home.php?p=3">	
-						<div id = "stock_nav">
-							&nbsp; Your Stock
-						</div>
-					</a>
-				</li>
+				
 				<li>
 					<a href = "home.php?p=4">	
 						<div id = "basket_nav">
@@ -166,9 +160,6 @@
 						break;
 					case 2 :
 						include 'home_orders.php';
-						break;
-					case 3 :
-						include 'home_stock.php';
 						break;
 					case 4 :
 						include 'home_basket.php';
