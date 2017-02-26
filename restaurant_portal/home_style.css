@@ -288,12 +288,59 @@ For Nav Bar
 {
 	text-align: left;
 	float: left;
-	width: 650px;
+	width: 500px;
 }
 
-#password_update
+#labels
 {
-	
+	width: 50%;
+	float: left;
+	font-weight: bold;
+}
+
+#details
+{
+	width: 50%;
+	float: right;
+	text-align: right;
+}
+
+#change_details_panel
+{
+	display: none;
+	background-color: white;
+	box-shadow: 7px 7px 5px #888888;
+	margin-top: 30px;
+	width: 400px;
+	padding: 20px;
+	margin-left: calc(50% - 375px);
+	text-align: center;
+}
+
+#col_1
+{
+	width: 49%;
+	float: left;
+}
+
+#col_2
+{
+	width: 49%;
+	float: right;
+}
+
+#submit_div
+{
+	width: 100%;
+	margin-top: 275px;
+}
+
+.button
+{
+	width: 125px;
+	height: 25px;
+	background-color: white;
+	border: 2px solid #DDDDDD;
 }
 
 .small_menu
@@ -334,18 +381,20 @@ For Nav Bar
 {
 	width: 90%;
 	list-style-type: none;
+	
 }
 
 .category_box li
 {
 	background-color: white;
-	border: 2px solid #DDDDDD;
+	
 	display: inline-block;
 	cursor: pointer;
 	width: 200px;
 	height: 200px;
 	margin: 15px;
-	
+	font-family: arial;
+	font-size: 20px;
 	box-shadow: 7px 7px 5px #888888;	
 	
 	transition-property: width, height, margin, background-color;
