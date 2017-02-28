@@ -33,7 +33,7 @@
 						var click_count = 0;
 		
 						window.addEventListener("resize", enable_nav);
-						document.getElementById("content").addEventListener("click", test);
+						
 
 						function enable_nav()
 						{
@@ -62,11 +62,6 @@
 								document.getElementById("nav_bar").style.display = "none";
 								click_count = 0;
 							}
-						}
-						
-						function test()
-						{
-							window.alert("Hide Menu");
 						}
 						
 					</script>
