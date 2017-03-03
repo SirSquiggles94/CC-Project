@@ -76,7 +76,7 @@
 			</ul>
 			
 			
-			
+			<?php include 'lib.php'; ?>
 		
 		</header>
 		<nav id = "nav_bar">

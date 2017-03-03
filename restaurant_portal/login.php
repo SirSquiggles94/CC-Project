@@ -18,13 +18,18 @@
 			
 			<div class = "form_panel">
 	
-				<form id = "login_form" method = "POST" action = "login.php">
+				<form id = "login_form" method = "POST" action = "login_process.php">
+				
+					<h3 id = "incorrect_details">Incorrect Details - Please Try Again.</h3><br><br>
 				
 					<label id = "email_address_label" for = "email_address">Email Address: </label><br>
 					<input id = "email_address" name = "email_address" type = "text" class = "form_field"><br>
 					
 					<label id = "password_label" for = "password">Password: </label><br>
-					<input id = "password" name = "password" type = "password" class = "form_field">
+					<input id = "password" name = "password" type = "password" class = "form_field"><br>
+					
+					<label id = "remember_pass_label" for = "remember_pass">Remember Login? </label>
+					<input id = "remember_pass" name = "remember_pass" type = "checkbox">
 					
 					<hr class = "fancy_hr">
 					
@@ -35,6 +40,44 @@
 				</form>
 				
 			</div>
+			
+			
+			<script>
+			
+				var err = 0;
+				
+				<?php
+					if(!isset($_SESSION))
+					{
+						session_start();
+					}
+					if(!isset($_SESSION['err_num']))
+					{
+						$err_num = 0;
+					}
+					else
+					{
+						$err_num = $_SESSION['err_num'];
+					}
+					
+					if($err_num == 1)
+					{
+						echo 'err = 1;';
+					}
+					
+					
+					session_destroy();
+				?>
+			
+				if(err == 1)
+				{
+					document.getElementById('email_address_label').style.color = "red";
+					document.getElementById('password_label').style.color = "red";
+					document.getElementById('incorrect_details').style.display = "inline";
+				}
+			
+			
+			</script>
 	
 		</content>
 	</body>
