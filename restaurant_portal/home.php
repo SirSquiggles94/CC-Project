@@ -76,7 +76,20 @@
 			</ul>
 			
 			
-			<?php include 'lib.php'; ?>
+			<?php 
+				include 'lib.php'; 
+			
+				$db_conn = config_db();
+		
+				if(!isset($_SESSION))
+				{
+					session_start();
+				}
+		
+				$user = check_login();
+			
+			
+			?>
 		
 		</header>
 		<nav id = "nav_bar">

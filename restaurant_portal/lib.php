@@ -35,6 +35,10 @@
 		{
 			header('Location: login.php');
 		}
+		else
+		{
+			return $_SESSION['user_id'];
+		}
 	}
 	
 	

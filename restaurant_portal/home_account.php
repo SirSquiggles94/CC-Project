@@ -2,23 +2,11 @@
 	<li id = "info_panel">
 		Account Details:
 		
-		<?php
-		
-			function get_user_details()
-			{
-				$array = array("A restaurant", "An Owner", "00000 000000", "arestaurant@domain.com", "A Place", "A Town", "A County", "AA00 0AA");
-				return $array;
-			}
-		
-		
-			$user_details = get_user_details();
-		
-		
-		?>
 		<br>
 		<br>
 		
 		<div id = "labels">
+		
 			Restaurant Name:<br>
 			Owner:<br>
 			Telephone Number:<br>
@@ -31,15 +19,18 @@
 		
 			<?php
 				
-				for($i = 0; $i < 8; $i++)
-				{
-					echo $user_details[$i], '<br>';
-				}
+				$get_user_info_query = "SELECT restaurant_name, owner_forename, owner_surname, restaurant_telephone, restaurant_email, restaurant_address_Ln1, restaurant_address_Ln2, restaurant_address_Ln3, restaurant_address_Ln4 FROM customers WHERE customer_id = '$user'";
+				$get_user_info_query_result = mysqli_query($db_conn, $get_user_info_query);
 				
-			
-			
+				$user_info = mysqli_fetch_array($get_user_info_query_result);
+				
+				for($i = 0; $i < 9; $i++)
+				{
+					echo $user_info[$i] . "<br>";
+				}
 			
 			?>
+			
 			<br> <br>
 			<button class = "button" onClick = "change_details();">Change details</button>
 		
@@ -66,6 +57,7 @@
 		
 		</form>
 	
+		
 	
 	</li>
 	
@@ -131,8 +123,36 @@
 		document.getElementById("change_details_panel").style.display = "block";
 	}
 
+	function check_pass_change()
+	{
+		<?php
+		
+			if(isset($_SESSION['change_state']))
+			{
+				echo 'var change_state = ' . $_SESSION['change_state'] . ';';
+				unset($_SESSION['change_state']);
+			}
+			else
+			{
+				echo 'var change_state = null';
+			}		
+		?>
+		
+		if(change_state == 0)
+		{
+			window.alert("Password has been changed.");
+		}
+		else if(change_state == 1)
+		{
+			window.alert("New Passwords do not match.");
+		}
+		else if(change_state == 2)
+		{
+			window.alert("Old password is incorrect.");
+		}
+	}
 
-
+	check_pass_change();
 
 
 

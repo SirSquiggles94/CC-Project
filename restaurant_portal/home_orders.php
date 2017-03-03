@@ -7,11 +7,9 @@
 	<?php
 	
 		
-	
-		$db_conn = config_db();
-		$get_distinct_orders = "SELECT order_id FROM orders WHERE customer_id = 1";
-		$distinct_orders_result = mysqli_query($db_conn, $get_distinct_orders);
 		
+		$get_distinct_orders = "SELECT order_id FROM orders WHERE customer_id = '$user'";
+		$distinct_orders_result = mysqli_query($db_conn, $get_distinct_orders);
 		
 		if(!$db_conn)
 		{
