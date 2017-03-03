@@ -11,7 +11,7 @@
 	
 	if(isset($_POST))
 	{
-		$username = $_POST['email_address'];
+		$username = mysqli_real_escape_string($db, $_POST['email_address']);
 		$password = $_POST['password'];
 		$secure_password = hash_value($password);
 		
@@ -26,10 +26,12 @@
 		
 		$salt_query = "SELECT salt FROM customers WHERE restaurant_email = '$username'";
 		$salt_query_result = mysqli_query($db, $salt_query);
+		echo $salt_query;
 		
 		if(mysqli_num_rows($salt_query_result) != 1)
 		{
 			echo 'Server Error, Please Try Again.';
+			break;
 		}
 		
 		$salt = mysqli_fetch_assoc($salt_query_result);
@@ -39,6 +41,8 @@
 			
 		$login_query = "SELECT customer_id FROM customers WHERE restaurant_email = '$username' AND password = '$combined_password_salt'";
 		$login_query_result = mysqli_query($db, $login_query);
+		
+		echo $login_query;
 		
 		if(mysqli_num_rows($login_query_result) != 1)
 		{
@@ -63,6 +67,8 @@
 				$rem_log_query = "UPDATE customers SET rem_log = '$cookie_value' WHERE customer_id = '$user'";
 				mysqli_query($db, $rem_log_query);
 				
+				echo $rem_log_query;
+				
 				setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/");
 				
 				$cookie_name = "set_usr";
@@ -82,5 +88,6 @@
 	else
 	{
 		echo 'Server Error, Please try again.';
+		break;
 	}
 ?>
