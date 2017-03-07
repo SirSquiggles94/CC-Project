@@ -22,10 +22,9 @@
 					
 				</li>
 				<li id = "small_menu" class = "small_menu">
-				
-
-					
+			
 					<br>
+					
 					<button id = "menu_button" onClick = "show_menu()">&#9776; Menu</button>
 					
 					<script>
@@ -33,8 +32,8 @@
 						var click_count = 0;
 		
 						window.addEventListener("resize", enable_nav);
+						document.onload = display_add_to_basket();
 						
-
 						function enable_nav()
 						{
 							var win_size = window.innerWidth;
@@ -65,18 +64,14 @@
 						}
 						
 					</script>
+						
 					
-				
-				</li>
-			
-			
-			
-			
-			
+					
+				</li>			
 			</ul>
-			
-			
+
 			<?php 
+			
 				include 'lib.php'; 
 			
 				$db_conn = config_db();
@@ -87,7 +82,6 @@
 				}
 		
 				$user = check_login();
-			
 			
 			?>
 		
@@ -113,17 +107,11 @@
 				<li>
 					<a href = "home.php?p=4">	
 						<div id = "basket_nav">
-							&nbsp; Your Basket
+							&nbsp; Your Basket &nbsp; <?php $prod_count = get_basket_count($user); echo $prod_count[0]; ?>
 						</div>
 					</a>
 				</li>
-				<li>
-					<a href = "home.php?p=5">	
-						<div id = "plOrder_nav">
-							&nbsp; Place an Order
-						</div>
-					</a>
-				</li>
+				
 				<li>
 					<a href = "home.php?p=6">	
 						<div id = "browse_nav">
@@ -134,14 +122,7 @@
 				<li>
 					<a href = "home.php?p=7">	
 						<div id = "favSupplier_nav">
-							&nbsp; Favourite Suppliers
-						</div>
-					</a>
-				</li>
-				<li>
-					<a href = "home.php?p=8">	
-						<div id = "favProduct_nav">
-							&nbsp; Favourite Products
+							&nbsp; Log Out
 						</div>
 					</a>
 				</li>
@@ -172,18 +153,11 @@
 					case 4 :
 						include 'home_basket.php';
 						break;	
-					case 5 :
-						include 'home_plOrder.php';
-						break;
+					
 					case 6 :
 						include 'home_browse.php';
 						break;
-					case 7 :
-						include 'home_favSuppliers.php';
-						break;
-					case 8 :
-						include 'home_favProducts.php';
-						break;
+					
 					default:
 						include 'home_default.php';
 						break;

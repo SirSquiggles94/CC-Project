@@ -25,14 +25,6 @@
 					</a>
 				</li>
 				<li>
-					<a href = "home.php?p=5">
-						<div id = "plOrder">
-							Place an Order
-							<img src = "Images/plcOrder_icon.png" class = "tile_icon">
-						</div>
-					</a>
-				</li>
-				<li>
 					<a href = "home.php?p=6">
 						<div id = "browse">
 							Browse Products
@@ -42,17 +34,9 @@
 				</li>
 				<li>
 					<a href = "home.php?p=7">
-						<div id = "favSupplier">
-							Favourite Suppliers
-							<img src = "Images/favSupplier_icon.png" class = "tile_icon">
-						</div>
-					</a>
-				</li>
-				<li>
-					<a href = "home.php?p=8">
-						<div id = "favProduct">
-							Favourite Products
-							<img src = "Images/favProduct_icon.png" class = "tile_icon">
+						<div id = "log_out">
+							Log Out
+							<img src = "Images/log_out_icon.png" class = "tile_icon">
 						</div>
 					</a>
 				</li>

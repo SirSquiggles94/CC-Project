@@ -32,8 +32,9 @@
 			?>
 			
 			<br> <br>
+			<!--
 			<button class = "button" onClick = "change_details();">Change details</button>
-		
+			-->
 		</div>
 		
 	</li>
@@ -45,13 +46,13 @@
 			<br>
 			
 			<label>Old Password:</label><br>
-			<input name = "old_password" type = "textbox"><br><br>
+			<input name = "old_password" type = "password"><br><br>
 			
 			<label>New Password:</label><br>
-			<input name = "new_password" type = "textbox"><br><br>
+			<input name = "new_password" type = "password"><br><br>
 			
 			<label>Re-Type New Password:</label><br>
-			<input name = "password_validation" type = "textbox"><br><br>
+			<input name = "password_validation" type = "password"><br><br>
 			
 			<input class = "button" type = "submit" value = "Submit">
 		

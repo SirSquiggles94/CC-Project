@@ -26,12 +26,11 @@
 		
 		$salt_query = "SELECT salt FROM customers WHERE restaurant_email = '$username'";
 		$salt_query_result = mysqli_query($db, $salt_query);
-		echo $salt_query;
 		
 		if(mysqli_num_rows($salt_query_result) != 1)
 		{
-			echo 'Server Error, Please Try Again.';
-			break;
+			$_SESSION['err_num'] = 1;
+			header('Location: login.php');
 		}
 		
 		$salt = mysqli_fetch_assoc($salt_query_result);
@@ -41,8 +40,6 @@
 			
 		$login_query = "SELECT customer_id FROM customers WHERE restaurant_email = '$username' AND password = '$combined_password_salt'";
 		$login_query_result = mysqli_query($db, $login_query);
-		
-		echo $login_query;
 		
 		if(mysqli_num_rows($login_query_result) != 1)
 		{

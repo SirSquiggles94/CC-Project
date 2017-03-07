@@ -7,7 +7,7 @@
 		$db = config_db();
 		
 		$user = mysqli_real_escape_string($db, $_COOKIE['set_usr']);
-		$secure_login = $_COOKIE['set_log'];
+		$secure_login = mysqli_real_escape_string($db, $_COOKIE['set_log']);
 		
 	
 		
