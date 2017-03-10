@@ -1,9 +1,9 @@
 <?php
 
-	include 'lib.php';
-
-	
-	$db_conn = config_db();
+	function get_basket()
+	{
+		$get_basket_query = ""
+	}
 	
 	
 	
