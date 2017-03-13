@@ -70,41 +70,76 @@
 	function return_products()
 	{
 		$user = check_login();
-		$db_conn = config_db();
+		$db = config_db();
 		$get_products_query = "SELECT products.product_id, products.product_name, products.product_description, products.image_path, products.price, product_category.cat_name, suppliers.supplier_name FROM products INNER JOIN product_category ON products.cat_id = product_category.cat_id INNER JOIN suppliers ON products.supplier_id = suppliers.supplier_id";	
+	
+		$stmt = mysqli_stmt_init($db);
+		mysqli_stmt_prepare($stmt, $get_products_query);
 	
 		if(isset($_SESSION['category']) && isset($_SESSION['supplier']))
 		{
 			$category = $_SESSION['category'];
 			$supplier = $_SESSION['supplier'];
-			$get_products_query = "SELECT products.product_id, products.product_name, products.product_description, products.image_path, products.price, product_category.cat_name, suppliers.supplier_name FROM products INNER JOIN product_category ON products.cat_id = product_category.cat_id INNER JOIN suppliers ON products.supplier_id = suppliers.supplier_id WHERE product_category.cat_id = '$category' AND suppliers.supplier_id = '$supplier'";
+			$get_products_query = "SELECT products.product_id, products.product_name, products.product_description, products.image_path, products.price, product_category.cat_name, suppliers.supplier_name FROM products INNER JOIN product_category ON products.cat_id = product_category.cat_id INNER JOIN suppliers ON products.supplier_id = suppliers.supplier_id WHERE product_category.cat_id = ? AND suppliers.supplier_id = ?";
+		
+			$stmt = mysqli_stmt_init($db);
+			mysqli_stmt_prepare($stmt, $get_products_query);
+			mysqli_stmt_bind_param($stmt, "ii", $category, $supplier);
 		}
 		else if(isset($_SESSION['category']))
 		{
 			$category = $_SESSION['category'];
-			$get_products_query = "SELECT products.product_id, products.product_name, products.product_description, products.image_path, products.price, product_category.cat_name, suppliers.supplier_name FROM products INNER JOIN product_category ON products.cat_id = product_category.cat_id INNER JOIN suppliers ON products.supplier_id = suppliers.supplier_id WHERE product_category.cat_id = '$category'";
+			$get_products_query = "SELECT products.product_id, products.product_name, products.product_description, products.image_path, products.price, product_category.cat_name, suppliers.supplier_name FROM products INNER JOIN product_category ON products.cat_id = product_category.cat_id INNER JOIN suppliers ON products.supplier_id = suppliers.supplier_id WHERE product_category.cat_id = ?";
+		
+			$stmt = mysqli_stmt_init($db);
+			mysqli_stmt_prepare($stmt, $get_products_query);
+			mysqli_stmt_bind_param($stmt, "i", $category);
 		}
 		else if(isset($_SESSION['supplier']))
 		{
 			$supplier = $_SESSION['supplier'];
-			$get_products_query = "SELECT products.product_id, products.product_name, products.product_description, products.image_path, products.price, product_category.cat_name, suppliers.supplier_name FROM products INNER JOIN product_category ON products.cat_id = product_category.cat_id INNER JOIN suppliers ON products.supplier_id = suppliers.supplier_id WHERE suppliers.supplier_id = '$supplier'";
+			$get_products_query = "SELECT products.product_id, products.product_name, products.product_description, products.image_path, products.price, product_category.cat_name, suppliers.supplier_name FROM products INNER JOIN product_category ON products.cat_id = product_category.cat_id INNER JOIN suppliers ON products.supplier_id = suppliers.supplier_id WHERE suppliers.supplier_id = ?";
+		
+			$stmt = mysqli_stmt_init($db);
+			mysqli_stmt_prepare($stmt, $get_products_query);
+			mysqli_stmt_bind_param($stmt, "i", $supplier);
 		}
-	
-		$get_products_query_result = mysqli_query($db_conn, $get_products_query);
+		
+		
+		mysqli_stmt_execute($stmt);
+		$result = mysqli_stmt_get_result($stmt);
+		mysqli_stmt_fetch($stmt);
+		mysqli_stmt_close($stmt);
 			
-		return $get_products_query_result;
+		return $result;
 	}
 	
 	function get_basket_count($user)
 	{
-		$count_query = "SELECT COUNT(*) FROM basket_items WHERE user_id = '$user'";
-		$count_query_result = mysqli_query(config_db(), $count_query);
+		$db = config_db();
+		$count_query = "SELECT COUNT(*) FROM basket_items WHERE user_id = ?";
 		
-		$result = mysqli_fetch_array($count_query_result);
+		$stmt = mysqli_stmt_init($db);
+		mysqli_stmt_prepare($stmt, $count_query);
+		mysqli_stmt_bind_param($stmt, "i", $user);
+		mysqli_stmt_execute($stmt);
+		$result = mysqli_stmt_get_result($stmt);
+		mysqli_stmt_fetch($stmt);
+		mysqli_stmt_close($stmt);
 		
-		return $result;
+		while($item = mysqli_fetch_array($result))
+		{
+			return $item;
+		}
 	}
 	
+	function sanitize_input($dirty_input)
+	{
+		$bad_char = array("{", "}", "(", ")", "[", "]", "<", ">", "/", "\"", ";", ":");
+		$clean_data = str_ireplace($bad_char, "", $dirty_input);
+		
+		return $clean_data;
+	}
 	
 
 

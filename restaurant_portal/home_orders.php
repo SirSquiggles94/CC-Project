@@ -8,8 +8,7 @@
 	
 		
 		
-		$get_distinct_orders = "SELECT order_id FROM orders WHERE customer_id = '$user'";
-		$distinct_orders_result = mysqli_query($db_conn, $get_distinct_orders);
+		
 		
 		if(!$db_conn)
 		{
@@ -17,7 +16,17 @@
 		}
 		else
 		{
-			$order_count = mysqli_num_rows($distinct_orders_result);
+			
+			$get_distinct_orders = "SELECT order_id FROM orders WHERE customer_id = ?";
+			$stmt = mysqli_stmt_init($db_conn);
+			mysqli_stmt_prepare($stmt, $get_distinct_orders);
+			mysqli_stmt_bind_param($stmt, "s", $user);
+			mysqli_stmt_execute($stmt);
+			$order_id = mysqli_stmt_get_result($stmt);
+			mysqli_stmt_fetch($stmt);
+			mysqli_stmt_close($stmt);
+			
+			$order_count = mysqli_num_rows($order_id);
 			
 			if($order_count > 0)
 			{
@@ -25,7 +34,7 @@
 			
 				for($c = 0; $c < $order_count; $c++)
 				{
-					while($order_num = mysqli_fetch_assoc($distinct_orders_result))
+					while($order_num = mysqli_fetch_assoc($order_id))
 					{
 						$get_orders_query = "SELECT order_details.order_id, order_details.product_id, order_details.quantity, orders.date_placed, products.product_name, products.product_description, products.image_path, products.price, suppliers.supplier_id, suppliers.supplier_name FROM order_details INNER JOIN orders ON order_details.order_id = orders.order_id INNER JOIN products ON order_details.product_id = products.product_id INNER JOIN suppliers ON products.supplier_id = suppliers.supplier_id WHERE order_details.order_id IN (".implode(',' , $order_num).")";
 						$orders_result = mysqli_query($db_conn, $get_orders_query);
